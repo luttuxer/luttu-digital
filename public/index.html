@@ -17,12 +17,21 @@ bookingForm.addEventListener('submit', function(e) {
   const service = document.getElementById('service').value;
   const details = document.getElementById('details').value.trim();
 
-  const text = '*Luttu Digital Booking Request*\\n\\n' +
-    'Name: ' + name + '\\n' +
-    'WhatsApp: ' + phone + '\\n' +
-    'Service: ' + service + '\\n' +
-    'Details: ' + (details || 'Not provided');
-
+  const text =
+    '╭━━━ ✦ LUTTU DIGITAL ✦ ━━━╮\n\n' +
+    '📩 *NEW BOOKING REQUEST*\n' +
+    '━━━━━━━━━━━━━━━━━━\n\n' +
+    '👤 *CUSTOMER DETAILS*\n' +
+    '▪️ Name: ' + name + '\n' +
+    '▪️ WhatsApp: ' + phone + '\n\n' +
+    '🛠️ *SERVICE REQUESTED*\n' +
+    '▪️ Service: ' + service + '\n\n' +
+    '📝 *PROJECT DESCRIPTION*\n' +
+    (details || 'Not provided') + '\n\n' +
+    '━━━━━━━━━━━━━━━━━━\n' +
+    '✨ Thank you for choosing Luttu Digital!\n' +
+    'We will contact you soon to discuss your project.\n\n' +
+    '╰━━━━━━━ 🤍 ━━━━━━━╯';
   const url = 'https://wa.me/917907914657?text=' + encodeURIComponent(text);
   const msg = document.getElementById('message');
   msg.textContent = 'Opening WhatsApp...';
